@@ -1,0 +1,64 @@
+/*********************Algorithm 1**********************/
+FUNCTION dot_product (v1,v2: INTEGER[2]) : INTEGER
+VAR
+    ps:INTEGER;
+BEGIN
+    ps:= v1[0]*v2[0] + v1[1]*v2[1];
+    RETURN ps;
+END
+ALGORITHM DOT_PRODUCT
+VAR
+    n :INTEGER;
+    col : ARRAY_OF int[n][2];
+BEGIN
+    write("Enter the number of vectors");
+    read(n);
+    FOR i form 0 to n-1 do
+        write("Enter the element", i+1,  "of the first value");
+        read(C[i][1]);
+        write("Enter the element", i+1,  "of the Second value");
+        read(c[i][2]);
+    END_For 
+    VAR sca : INTEGER:=0;
+    write("the list of orthogonal vertors is: ");
+    FOR i form 0 to n-1 step 1 do
+            VAR tmp : INTEGER:=0;
+            tmp := dot_product(c[i][1],c[i][2]);
+            if tmp = 0 then
+                write(c[i][1], " et ", c[i][2], " ; ");
+            end_if          
+        END_For 
+    END_For 
+    if()
+END
+
+
+/*********************Algorithm 2**********************/
+ALGORITHM Insertion_sort
+VAR
+    i,res,len,val : INTEGER;
+    tab : ARRAY_OF INTEGER[];
+BEGIN
+    len = tab.length();
+    for i from 0 to len-1 do
+        read("white the number");
+        write(tab[i]);
+    END_For
+    write("Enter the value");
+    read(val);
+    WHILE (i<len) DO
+            if tab[i]>val then
+            res := tab[i];
+            tab[i] := val;
+            tab[i+1] := res;
+            i++;
+            end_if
+        for j from i to len-1 do
+            if tab[i]>tab[j] then
+            rep:=tab[i];
+            tab[i]:=tab[j];
+            tab[j]:=rep;
+        END_For
+    END_WHILE
+
+END
